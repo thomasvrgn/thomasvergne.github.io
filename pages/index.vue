@@ -1,73 +1,18 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        portfolio-experiments
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
+  <div class="flex flex-row h-screen w-full">
+    <div class="flex justify-center text-center mx-auto flex-col">
+      <h1 class="font-bold text-6xl text-gray-800">Thomas</h1>
+      <p class="my-4 text-xl text-gray-400 font-medium">Portfolio en construction...</p>
+      <div class="container flex flex-row space-x-4">
+        <a href="https://twitter.com/thomasvergne_" class="border-blue-400 border text-blue-400 py-2 px-4 text-lg items-center flex rounded-md w-40 justify-center focus:outline-none hover:bg-blue-400 hover:text-white">
+          <i class="fab fa-twitter mr-4 fa-lg"></i>
+          Twitter
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
+        <a href="https://github.com/thomasvergne" class="border-gray-600 border text-gray-600 py-2 px-4 text-lg items-center flex rounded-md w-40 justify-center focus:outline-none hover:bg-gray-600 hover:text-white">
+          <i class="fab fa-github mr-4 fa-lg"></i>
           GitHub
         </a>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
