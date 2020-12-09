@@ -9,7 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.14.0"
+    "@nuxtjs/tailwindcss": "^3.3.3",
+    "autoprefixer": "^9",
+    "nuxt": "^2.14.0",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {}
 }
