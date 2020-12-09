@@ -44,8 +44,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-  ],
+  buildModules: ['@nuxtjs/tailwindcss'],
   /*
   ** Nuxt.js modules
   */
