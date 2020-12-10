@@ -11,9 +11,14 @@
           <p class="text-xl mt-4 text-gray-600 text-opacity-75 lg:w-1/2">
             Je suis développeur web et concepteur d'interfaces graphiques depuis maintenant 5 ans. Je prends beaucoup de plaisir à exercer cette passion.
           </p>
-          <button class="flex justify-center mt-4 border border-indigo-400 flex-initial w-44 py-2 rounded-md text-indigo-400 focus:outline-none hover:bg-indigo-400 hover:text-white">
-            En découvrir plus
-          </button>
+          <div class="container flex flex-row mt-4 space-x-8">
+            <button class="flex justify-center bg-indigo-400 flex-initial w-44 py-2 rounded-md text-white focus:outline-none hover:bg-indigo-500">
+              En découvrir plus
+            </button>
+            <button class="flex justify-center items-center text-indigo-400 hover:text-indigo-500">
+              Me contacter
+            </button>
+          </div>
         </div>
       </div>
     </header>
