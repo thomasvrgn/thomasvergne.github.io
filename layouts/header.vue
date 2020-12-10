@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col lg:min-h-screen">
     <header class="bg-white flex flex-auto" style="height: 450px">
-      Header
+      <Navbar />
     </header>
     <section class="bg-blue-400 flex flex-col lg:flex-row lg:flex-grow-0 lg:h-64">
       <article class="h-64 bg-gray-200 lg:w-1/3">
@@ -18,7 +18,11 @@
 </template>
 
 <script>
+import Navbar from '~/layouts/navbar.vue';
 export default {
-  name: 'header'
+  name: 'header',
+  components: {
+    Navbar,
+  }
 }
 </script>
