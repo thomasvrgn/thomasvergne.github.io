@@ -8,7 +8,7 @@
       <p class="mt-4 font-light text-gray-500 text-lg">
         Jeune développeur passionné par l'informatique, la programmation ainsi que la création et conception de sites internets depuis maintenant 5 ans.
       </p>
-      <div class="container mt-4 flex flex-row justify-center space-x-8">
+      <div class="container mt-6 flex flex-row justify-center space-x-8">
         <button class="flex transition-colors duration-150 bg-indigo-400 hover:bg-indigo-500 text-white py-2 px-9 font-semibold rounded-full items-center">
           Découvrir
         </button>
@@ -29,11 +29,3 @@ export default {
   }
 }
 </script>
-
-<style>
-@media (min-width: 1024px) {
-  section {
-    height: 340px !important;
-  }
-}
-</style>
