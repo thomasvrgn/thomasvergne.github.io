@@ -1,7 +1,5 @@
-<svelte:head>
-	<title>Sapper project template</title>
-</svelte:head>
+<div class="container">
+	<h1 class="text-4xl">
 
-<h1>Great success!</h1>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+	</h1>
+</div>
