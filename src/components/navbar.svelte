@@ -8,10 +8,10 @@
         <div class="container flex-row flex">
             <img src={Logo} class="rounded-full w-16 shadow-lg" />
             <span class="items-center flex ml-8 text-2xl font-semibold text-gray-800">
-            Thomas
+            Thomas Vergne
         </span>
         </div>
-        <div class="container flex flex-row justify-end px-4">
+        <div class="container flex flex-row justify-end px-4 w-1/2">
             <ul class="flex items-center text-2xl text-gray-800 space-x-5">
                 <i class="fab fa-github"></i>
                 <i class="fab fa-twitter"></i>
