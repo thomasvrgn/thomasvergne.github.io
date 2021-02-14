@@ -7,7 +7,7 @@
         <div class="container flex-row flex flex-initial w-32 lg:justify-center">
             <img src={Logo} class="rounded-full w-16 h-16 shadow-lg" alt="Thomas's logo" />
         </div>
-        <div class="container flex flex-col flex-auto mt-4 lg:mt-0 lg:flex-row lg:px-4 lg:pr-6">
+        <div class="container flex flex-col flex-auto mt-4 lg:mt-0 lg:flex-row px-4 lg:pr-6">
             <span class="items-center flex text-2xl font-semibold text-gray-800">
                 Thomas Vergne
             </span>
