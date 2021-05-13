@@ -1,7 +1,8 @@
+import { Button } from './utils/Button';
 import { Title } from './utils/Title';
 
 export const Presentation = () => {
-  return <section>
+  return <section className="md:w-3/5 lg:w-1/2" id="presentation">
     <Title>
       Présentation
     </Title>
@@ -14,5 +15,10 @@ export const Presentation = () => {
 
       Concernant mon parcours web, j'ai pu expérimenter divers bords et diverses approches comme le côté serveur, côté database, côté devops, mais ai préféré le côté client (front end) pour la créativité que ce dernier requiert.
     </p>
+    <div className="mt-8">
+      <Button coloured href="#contact">
+        Me contacter
+      </Button>
+    </div>
   </section>
 }

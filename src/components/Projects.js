@@ -27,9 +27,9 @@ export const Projects = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return <section>
+  return <section id="projects">
     <Title>Projets</Title>
-    <div className="pt-8 space-y-6">
+    <div className="pt-8 space-y-6 md:flex md:space-y-0 flex-wrap gap-5">
       {informations.map((response, index) => <Card response={response} key={index} />)}
     </div>
   </section>
@@ -58,9 +58,9 @@ export const Card = ({ response }) => {
   const { description, html_url, name, language, owner } = response;
   const { login} = owner;
 
-  return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg h-56 flex flex-col">
+  return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg min-h-56 md:min-h-64 flex flex-col md:w-[48%] lg:w-[32%]">
     <header className="mb-4 flex-auto">
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center md:flex-col md:items-start lg:items-center lg:flex-row">
         <h1 className="flex-auto text-2xl font-medium dark:text-white text-gray-700">{formatName(name)}</h1>
         <span className="flex flex-auto justify-end dark:text-white text-opacity-75 text-gray-700">{login}</span>
       </div>
@@ -71,7 +71,7 @@ export const Card = ({ response }) => {
         <Language language={language} />
       </div>
       <div className="flex flex-auto justify-end">
-        <Button coloured href={html_url}>Accéder</Button>
+        <Button coloured href={html_url} blank>Accéder</Button>
       </div>
     </div>
   </div>
