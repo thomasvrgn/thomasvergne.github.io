@@ -8,7 +8,7 @@ import { Contact } from './components/Contact';
 export const App = () => {
   return <main className="dark:bg-gray-800">
     <Navbar />
-    <div className="space-y-16 px-4 mt-8">
+    <div className="space-y-16 px-4 mt-8 lg:w-4/5 md:w-[90%] mx-auto">
       <Presentation />
       <Skills />
       <Features />
