@@ -19,11 +19,11 @@ export const Item = ({ image, children }) => {
     <li className="flex flex-row items-center flex-wrap group">
       <img src={image} alt="Item" className="flex-initial w-1/12 transform transition-transform duration-1000 group-hover:scale-[1.2]" />
       <span className="ml-4 text-lg font-medium dark:text-white text-gray-700 flex-auto w-10/12">
-        {title}
+        {title.props.children}
       </span>
       <span className="w-1/12 flex-initial"></span>
       <p className="ml-4 flex-auto w-10/12 dark:text-white dark:text-opacity-50 text-gray-600 text-opacity-70 dark:font-light">
-        {subtitle}
+        {subtitle.props.children}
       </p>
     </li>
   );
