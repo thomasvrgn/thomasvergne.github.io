@@ -15,12 +15,18 @@ export function Navbar() {
         </div>
       </div>
       <div className="flex flex-initial flex-col space-y-2 items-center text-3xl">
-        <FontAwesomeIcon icon={faDiscord} className="text-indigo-500"  />
-        <FontAwesomeIcon icon={faGithub} className="text-gray-800 dark:text-white" />
-        <FontAwesomeIcon icon={faTwitter} className="text-blue-400" />
+        <a href="https://discord.gg/YvMkKMJPvf" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faDiscord} className="text-indigo-500" />
+        </a>
+        <a href="https://github.com/thomasvergne" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faGithub} className="text-gray-800 dark:text-white" />
+        </a>
+        <a href="https://twitter.com/thomasvergne_" target="_blank" rel="noreferrer">
+          <FontAwesomeIcon icon={faTwitter} className="text-blue-400" />
+        </a>
       </div>
     </div>
-    <ul className="flex flex-col space-y-2 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-100 children:transition-colors children:duration-150">
+    <ul className="flex flex-col space-y-2 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150">
       <a href="#presentation">
         Présentation
       </a>
