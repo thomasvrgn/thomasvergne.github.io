@@ -1,5 +1,4 @@
 const plugin = require('tailwindcss/plugin');
-const _ = require('lodash');
 const selectorParser = require('postcss-selector-parser');
 
 const childrenVariant = function(pseudoClass = null, childrenSelector = null) {
