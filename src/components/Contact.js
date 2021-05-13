@@ -10,11 +10,11 @@ const contact = [
 
 export const Contact = () => <section>
   <Title>Moyens de contact</Title>
-  <ul className="p-2 py-4 space-y-1 text-lg">
+  <ul className="p-2 py-4 space-y-1 text-lg" id="contact">
     {contact.map(({ name, value }, index) => (
-      <li className="text-opacity-60 dark:text-white text-gray-800 font-light" key={index}>
+      <li className="text-opacity-60 dark:text-opacity-[55%] dark:text-white text-gray-800 font-light" key={index}>
         {name}: 
-        <span className="ml-1 font-semibold text-gray-700">{value}</span>
+        <span className="ml-1 font-semibold dark:text-white text-gray-700">{value}</span>
       </li>
     ))}
   </ul>
