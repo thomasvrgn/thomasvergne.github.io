@@ -60,7 +60,7 @@ export const Card = ({ response }) => {
 
   return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg h-56 flex flex-col">
     <header className="mb-4 flex-auto">
-      <div className="flex flex-row">
+      <div className="flex flex-row items-center">
         <h1 className="flex-auto text-2xl font-medium dark:text-white text-gray-700">{formatName(name)}</h1>
         <span className="flex flex-auto justify-end dark:text-white text-opacity-75 text-gray-700">{login}</span>
       </div>
