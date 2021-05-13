@@ -21,20 +21,19 @@ export function Navbar() {
       </div>
     </div>
     <ul className="flex flex-col space-y-2 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-100 children:transition-colors children:duration-150">
-      <a 
-        href="#presentation" >
+      <a href="#presentation">
         Présentation
       </a>
-      <a 
-        href="#skills" >
+      <a href="#skills">
         Compétences
       </a>
-      <a 
-        href="#features" >
+      <a href="#features">
         Avantages
       </a>
-      <a 
-        href="#contact" >
+      <a href="#projects">
+        Projets
+      </a>
+      <a href="#contact">
         Moyens de contact
       </a>
     </ul>
