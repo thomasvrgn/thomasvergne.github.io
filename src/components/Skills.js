@@ -4,8 +4,8 @@ import { skills } from './data/skills.data';
 export const Skills = () => <section>
   <Title>Compétences</Title>
   <ul className="px-4 pt-8 space-y-6">
-    {skills.map(({title, subtitle, image}) => (
-      <Item image={image}>
+    {skills.map(({title, subtitle, image}, index) => (
+      <Item image={image} key={index}>
         <h1>{title}</h1>
         <p>{subtitle}</p>
       </Item>
@@ -22,9 +22,9 @@ export const Item = ({ image, children }) => {
         {title}
       </span>
       <span className="w-1/12 flex-initial"></span>
-      <h1 className="ml-4 flex-auto w-10/12 dark:text-white dark:text-opacity-50 text-gray-600 text-opacity-70 dark:font-light">
+      <p className="ml-4 flex-auto w-10/12 dark:text-white dark:text-opacity-50 text-gray-600 text-opacity-70 dark:font-light">
         {subtitle}
-      </h1>
+      </p>
     </li>
   );
 }
