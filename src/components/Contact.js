@@ -36,7 +36,7 @@ export const Contact = () => {
 
   const getInput = (id) => inputs[id];
 
-  return <section className="mx-auto">
+  return <section className="mx-auto" id="contact">
     <Title>Me contacter</Title>
     <p className="text-white text-opacity-75 font-light">Faites-moi part de votre idée, de votre projet ou de votre produit et je vous répondrai sous les plus brefs délais</p>
     <div className="flex flex-col md:flex-row md:space-x-8">
