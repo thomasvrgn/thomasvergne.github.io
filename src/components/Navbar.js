@@ -24,7 +24,7 @@ export function Navbar() {
         <FontAwesomeIcon icon={faTwitter} className="text-blue-400" />
       </a>
     </div>
-    <ul className="flex flex-col xl:flex-row xl:flex-initial space-y-2 xl:space-y-0 xl:space-x-4 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150 dark:children:hover:text-white xl:w-6/12">
+    <ul className="flex flex-col xl:flex-row xl:flex-initial space-y-2 xl:space-y-0 xl:space-x-4 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150 dark:children:hover:text-white xl:w-6/12 xl:justify-end">
       <a href="#presentation">
         Présentation
       </a>
