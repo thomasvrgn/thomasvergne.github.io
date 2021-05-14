@@ -38,15 +38,15 @@ export const Contact = () => {
 
   return <section className="mx-auto" id="contact">
     <Title>Me contacter</Title>
-    <p className="text-white text-opacity-75 font-light">Faites-moi part de votre idée, de votre projet ou de votre produit et je vous répondrai sous les plus brefs délais</p>
+    <p className="dark:text-white dark:text-opacity-75 dark:font-light text-gray-700 text-opacity-60">Faites-moi part de votre idée, de votre projet ou de votre produit et je vous répondrai sous les plus brefs délais</p>
     <div className="flex flex-col md:flex-row md:space-x-8">
       <div className="py-8 flex-initial xl:w-1/4">
-        <h1 className="text-xl font-medium text-white">Réseaux sociaux</h1>
+        <h1 className="text-xl font-medium dark:text-white text-gray-700">Réseaux sociaux</h1>
         <ul className="mt-6 ml-4 md:ml-0 space-y-6 list-none">
           {contact.map(({ name, value, icon, href }, index) => (
-            <li className="font-medium flex flex-row items-center text-white" key={index}>
+            <li className="font-medium flex flex-row items-center dark:text-white text-gray-700" key={index}>
               <FontAwesomeIcon icon={icon} className="text-xl mr-4" />
-              <span className="text-opacity-50 text-white font-light">{name}: </span>
+              <span className="dark:text-opacity-50 dark:text-white dark:font-light text-gray-700 text-opacity-60">{name}: </span>
               <a className="ml-1" href={href} target="_blank" rel="noreferrer">{value}</a>
             </li>
           ))}
@@ -67,7 +67,7 @@ export const Contact = () => {
         </Input>
         <Input id="about" textarea onChange={setInput}>
           Dites-m'en plus<br />
-          <ul className="text-xs text-white text-opacity-40 list-disc list-inside mb-1 ml-2">
+          <ul className="text-xs dark:text-white text-gray-900 dark:text-opacity-40 text-opacity-40 list-disc list-inside mb-1 ml-2">
             <li>Temps de rendu voulu</li>
             <li>Moyens de contact</li>
             <li>Technologies à utiliser</li>
