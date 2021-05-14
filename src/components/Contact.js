@@ -4,7 +4,7 @@ import { Mailto } from './utils/Mail';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter, faInstagram, faDiscord, faDev } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faInstagram, faDiscord, faDev } from '@fortawesome/free-brands-svg-icons';
 
 const contact = [
   { name: 'Discord', value: '@Thomas.#1111', icon: faDiscord, href: 'https://discord.gg/YvMkKMJPvf' },
@@ -40,15 +40,17 @@ export const Contact = () => {
     <Title>Me contacter</Title>
     <p className="text-white text-opacity-75 font-light">Faites-moi part de votre idée, de votre projet ou de votre produit et je vous répondrai sous les plus brefs délais</p>
     <div className="flex flex-col md:flex-row md:space-x-8">
-      <div className="py-8 space-y-6 list-none flex-initial xl:w-1/4">
+      <div className="py-8 flex-initial xl:w-1/4">
         <h1 className="text-xl font-medium text-white">Réseaux sociaux</h1>
-        {contact.map(({ name, value, icon, href }, index) => (
-          <li className="font-medium flex flex-row items-center text-white" key={index}>
-            <FontAwesomeIcon icon={icon} className="text-xl mr-4" />
-            <span className="text-opacity-50 text-white font-light">{name}: </span>
-            <a className="ml-1" href={href} target="_blank" rel="noreferrer">{value}</a>
-          </li>
-        ))}
+        <ul className="mt-6 ml-4 md:ml-0 space-y-6 list-none">
+          {contact.map(({ name, value, icon, href }, index) => (
+            <li className="font-medium flex flex-row items-center text-white" key={index}>
+              <FontAwesomeIcon icon={icon} className="text-xl mr-4" />
+              <span className="text-opacity-50 text-white font-light">{name}: </span>
+              <a className="ml-1" href={href} target="_blank" rel="noreferrer">{value}</a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="py-8 space-y-6 flex-auto xl:flex-initial xl:w-3/5" id="form">
         <Input id="firstname" onChange={setInput}>
