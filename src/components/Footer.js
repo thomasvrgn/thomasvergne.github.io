@@ -29,8 +29,8 @@ export const Footer = () => {
       </div>
       <hr className="border-gray-700" />
       <div className="flex flex-row items-center gap-6 mt-8">
-        {socialNetworks.map(({ icon, href }) => (
-          <a href={href} className="text-3xl text-gray-500 hover:text-gray-400 transition-colors duration-200" target="_blank" rel="noreferrer">
+        {socialNetworks.map(({ icon, href }, index) => (
+          <a href={href} className="text-3xl text-gray-500 hover:text-gray-400 transition-colors duration-200" target="_blank" rel="noreferrer" key={index}>
             <FontAwesomeIcon icon={icon} />
           </a>
         ))}
