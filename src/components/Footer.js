@@ -14,7 +14,7 @@ export const Footer = () => {
   return <footer className="relative p-8 dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 mt-16">
     <div className="md:w-2/3 lg: mx-auto flex flex-col ">
       <div className="flex flex-row items-center">
-        <img src="https://cdn.discordapp.com/avatars/766231131720646666/a_4b77e86fd7c7de9b60d696fff4a0ce48.gif" className="w-16 h-16 rounded-full shadow-xl" alt="" />
+        <img src="https://cdn.discordapp.com/avatars/766231131720646666/a_e3d82f8dde9350ce924d729215873c24.gif" className="w-16 h-16 rounded-full shadow-xl" alt="" />
         <span className="ml-4 text-xl font-semibold dark:text-white text-gray-700">Thomas Vergne</span>
       </div>
       <div className="py-8 flex flex-col">
