@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+
 export function Navbar() {
   return <nav className="flex flex-row flex-wrap p-4 xl:w-4/5 xl:mx-auto xl:py-8">
     <div className="flex w-11/12 xl:w-4/12 items-center">
@@ -40,6 +42,9 @@ export function Navbar() {
       <a href="#contact">
         Moyens de contact
       </a>
+      <Link to="/blog">
+        Blog
+      </Link>
     </ul>
   </nav>
 }
