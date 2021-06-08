@@ -1,0 +1,11 @@
+#article h1 {
+  @apply text-3xl font-bold;
+}
+
+#article p {
+  @apply opacity-70;
+}
+
+#article {
+  @apply dark:text-white;
+}
