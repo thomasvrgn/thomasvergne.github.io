@@ -1,0 +1,11 @@
+{
+  "articles": [
+    {
+      "title": "My first article test",
+      "slug": "my-first-article",
+      "url": "./articles/dev/my-first-article.md",
+      "author": "thomasvergne",
+      "tags": ["dev", "life"]
+    }
+  ]
+}
