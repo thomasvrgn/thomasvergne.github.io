@@ -3,6 +3,7 @@
     {
       "title": "My first article test",
       "slug": "my-first-article",
+      "description": "This is only an article in order to achieve some tests on my new blog."
       "url": "./articles/dev/my-first-article.md",
       "author": "thomasvergne",
       "tags": ["dev", "life"],
