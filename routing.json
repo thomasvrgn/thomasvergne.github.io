@@ -5,7 +5,8 @@
       "slug": "my-first-article",
       "url": "./articles/dev/my-first-article.md",
       "author": "thomasvergne",
-      "tags": ["dev", "life"]
+      "tags": ["dev", "life"],
+      "image": "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png"
     }
   ]
 }
