@@ -2,6 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { goTo } from './utils/Button';
+
+export const AnchorLink = ({ children, href, blank = false, ...params }) => {
+  return <span onClick={() => goTo(href, blank)} {...params}>
+    {children}
+  </span>;
+}
 
 export function Navbar() {
   return <nav className="flex flex-row flex-wrap p-4 xl:w-4/5 xl:mx-auto xl:py-8">
@@ -16,18 +23,18 @@ export function Navbar() {
         </p>
       </div>
     </Link>
-    <div className="flex flex-initial w-1/12 xl:w-2/12 flex-col space-y-2 xl:space-y-0 xl:space-x-6 justify-center items-end text-3xl xl:flex-row xl:items-start xl:order-last xl:mt-1">
-      <a href="https://discord.gg/YvMkKMJPvf" target="_blank" rel="noreferrer">
+    <div className="flex flex-initial w-1/12 xl:w-2/12 flex-col space-y-2 xl:space-y-0 xl:space-x-6 justify-center items-end text-3xl xl:flex-row xl:items-start xl:order-last xl:mt-1 children:cursor-pointer">
+      <AnchorLink href="https://discord.gg/YvMkKMJPvf" blank>
         <FontAwesomeIcon icon={faDiscord} className="text-indigo-500" />
-      </a>
-      <a href="https://github.com/thomasvergne" target="_blank" rel="noreferrer">
+      </AnchorLink>
+      <AnchorLink href="https://github.com/thomasvergne" blank>
         <FontAwesomeIcon icon={faGithub} className="text-gray-800 dark:text-white" />
-      </a>
-      <a href="https://twitter.com/thomasvergne_" target="_blank" rel="noreferrer">
+      </AnchorLink>
+      <AnchorLink href="https://twitter.com/thomasvergne_" blank>
         <FontAwesomeIcon icon={faTwitter} className="text-blue-400" />
-      </a>
+      </AnchorLink>
     </div>
-    <ul className="flex flex-col xl:flex-row xl:flex-initial space-y-2 xl:space-y-0 xl:space-x-4 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150 dark:children:hover:text-white xl:w-6/12 xl:justify-end">
+    <div className="flex flex-col xl:flex-row xl:flex-initial space-y-2 xl:space-y-0 xl:space-x-4 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150 dark:children:hover:text-white xl:w-6/12 xl:justify-end">
       <HashLink to="/#presentation">
         Présentation
       </HashLink>
@@ -46,6 +53,6 @@ export function Navbar() {
       <Link to="/blog">
         Blog
       </Link>
-    </ul>
+    </div>
   </nav>
 }

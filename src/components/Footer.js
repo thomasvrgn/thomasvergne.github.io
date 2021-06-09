@@ -3,6 +3,7 @@ import { faGithub, faTwitter, faInstagram, faDiscord, faDev } from '@fortawesome
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { AnchorLink } from './Navbar';
 
 const socialNetworks = [
   { icon: faGithub, href: 'https://github.com/thomasvergne' },
@@ -21,7 +22,7 @@ export const Footer = () => {
       </Link>
       <div className="py-8 flex flex-col">
         <h1 className="uppercase text-lg dark:text-gray-400 text-gray-600 font-semibold text-opacity-95">Sections</h1>
-        <ul className="my-2 flex flex-col space-y-2 font-light children:hover:text-opacity-90 children:transition-colors children:duration-200 dark:children:text-white children:text-gray-700 dark:children:text-opacity-[70%] children:text-lg">
+        <div className="my-2 flex flex-col space-y-2 font-light children:hover:text-opacity-90 children:transition-colors children:duration-200 dark:children:text-white children:text-gray-700 dark:children:text-opacity-[70%] children:text-lg">
           <HashLink to="/#presentation">
             Présentation
           </HashLink>
@@ -40,14 +41,14 @@ export const Footer = () => {
           <Link to="/blog">
             Blog
           </Link>
-        </ul>
+        </div>
       </div>
       <hr className="border-gray-700" />
-      <div className="flex flex-row items-center gap-6 mt-8">
+      <div className="flex flex-row items-center gap-6 mt-8 children:cursor-pointer">
         {socialNetworks.map(({ icon, href }, index) => (
-          <a href={href} className="text-3xl text-gray-500 hover:text-gray-400 transition-colors duration-200" target="_blank" rel="noreferrer" key={index}>
+          <AnchorLink href={href} className="text-3xl text-gray-500 hover:text-gray-400 transition-colors duration-200" blank key={index}>
             <FontAwesomeIcon icon={icon} />
-          </a>
+          </AnchorLink>
         ))}
       </div>
       <span className="mt-8 mb-4 text-lg text-gray-400 font-light">
