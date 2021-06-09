@@ -7,13 +7,13 @@ export const Blog = () => {
   useEffect(() => {
     fetchRouter().then(x => setArticles(x.articles));
   }, []);
-  return <section className="mx-6">
+  return <section className="mx-6 space-y-8 flex flex-col">
     {articles && articles.map((x, i) => (
       <Link to={`/blog/${x.slug}`}>
         <div key={i} className="relative h-64 shadow-lg">
           <img src={x.image} alt="" className="h-full w-full object-cover rounded-xl" />
-          <span className="absolute inset-0 h-full w-full bg-black bg-opacity-50 backdrop-blur-sm backdrop-filter rounded-xl hover:backdrop-blur-[8px] transition-all duration-200 hover:bg-opacity-[.55]" />
-          <div className="absolute bottom-0 left-0 w-full h-1/3 my-3 px-3 text-white">
+          <span className="absolute inset-0 h-full w-full bg-black bg-opacity-50 backdrop-blur-[2px] backdrop-filter rounded-xl hover:backdrop-blur-[8px] transition-all duration-200 hover:bg-opacity-[.55]" />
+          <div className="absolute bottom-0 left-0 w-full my-3 px-3 text-white">
             <h1 className="text-xl font-semibold tracking-wide">{x.title}</h1>
             <p className="opacity-60 w-3/4">{x.description}</p>
           </div>
