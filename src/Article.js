@@ -15,10 +15,12 @@ export const Article = () => {
   const [ article, setArticle ] = useState();
   const [ user, setUser ] = useState();
   const { slug } = useParams();
+
   useEffect(() => {
     fetchRouter().then(articles => {
       const found = articles.articles.find(x => x.slug === slug);
       setArticle(found);
+      document.title = `Thomas Vergne - ${found.title}`
       fetch(`https://api.github.com/users/${found.author}`).then(x => x.json().then(usr => setUser(usr)));
       getArticle(found.url).then(content => setContent(marked(content)));
     });
@@ -26,15 +28,15 @@ export const Article = () => {
   }, []);
   
   return <section>
-    {article && user && (<>
-      <div className="flex flex-row m-6">
+    {article && user && (<section className="lg:w-2/3 xl:w-1/2 lg:mx-auto">
+      <div className="flex flex-row m-6 lg:mx-0">
         <img src={`https://avatars.githubusercontent.com/${article.author}`} className="w-16 h-16 rounded-full shadow-lg" alt="" />
         <div className="flex justify-center flex-col text-white ml-4">
           <h1 className="text-xl font-medium leading-4">Thomas</h1>
           <span className="opacity-70">Posté le {formatTimestamp(article.date)[0] + ' à ' + formatTimestamp(article.date)[1]}</span>
         </div>
       </div>
-      <div id="article" className="mx-6" dangerouslySetInnerHTML={{ __html: content }} />
-    </>)}
+      <div id="article" className="mx-6 lg:m-0" dangerouslySetInnerHTML={{ __html: content }} />
+    </section>)}
   </section>
 };
