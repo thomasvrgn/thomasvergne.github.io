@@ -6,7 +6,7 @@ import { ArticleCard } from "../Blog";
 const searchForArticle = (article, articles) => {
   const options = {
     includeScore: true,
-    keys: ['title', 'author', 'description', 'slug'],
+    keys: ['title', 'author', 'description', 'slug', 'tags'],
   };
 
   const fuse = new Fuse(articles, options);
