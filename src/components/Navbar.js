@@ -5,8 +5,8 @@ import { HashLink } from 'react-router-hash-link';
 
 export function Navbar() {
   return <nav className="flex flex-row flex-wrap p-4 xl:w-4/5 xl:mx-auto xl:py-8">
-    <div className="flex w-11/12 xl:w-4/12 items-center">
-      <img src="https://cdn.discordapp.com/avatars/766231131720646666/a_e3d82f8dde9350ce924d729215873c24.gif" className="w-24 h-24 rounded-xl shadow-xl" alt="" />
+    <Link to="/" className="flex w-11/12 xl:w-4/12 items-center">
+      <img src="https://avatars.githubusercontent.com/thomasvergne" className="w-24 h-24 rounded-xl shadow-xl" alt="" />
       <div className="ml-4">
         <h1 className="text-4xl font-semibold text-gray-800 dark:text-white">Thomas</h1>
         <p className="text-sm text-gray-700 text-opacity-90 dark:text-white dark:text-opacity-60 dark:font-light">
@@ -15,7 +15,7 @@ export function Navbar() {
           Passionné de mathématiques<br/>
         </p>
       </div>
-    </div>
+    </Link>
     <div className="flex flex-initial w-1/12 xl:w-2/12 flex-col space-y-2 xl:space-y-0 xl:space-x-6 justify-center items-end text-3xl xl:flex-row xl:items-start xl:order-last xl:mt-1">
       <a href="https://discord.gg/YvMkKMJPvf" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faDiscord} className="text-indigo-500" />
