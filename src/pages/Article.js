@@ -1,8 +1,8 @@
 import marked from 'marked';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { fetchRouter, getArticle } from './utils/article';
-import './assets/article.css';
+import { fetchRouter, getArticle } from '../utils/article';
+import '../assets/article.css';
 import { Link } from 'react-router-dom';
 import fetch from 'node-fetch';
 

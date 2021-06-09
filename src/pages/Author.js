@@ -1,7 +1,7 @@
 import { useParams } from 'react-router';
 import { Octokit } from '@octokit/rest';
 import { useEffect, useState } from 'react';
-import { fetchRouter } from './utils/article';
+import { fetchRouter } from '../utils/article';
 import { ArticleCard } from './Blog';
 
 export const Author = () => {

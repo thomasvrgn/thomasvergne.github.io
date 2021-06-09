@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Search } from './components/Search';
-import { ArticleContext } from './context/ArticleContext';
-import { fetchRouter } from './utils/article';
+import { Search } from '../components/Search';
+import { ArticleContext } from '../context/ArticleContext';
+import { fetchRouter } from '../utils/article';
 
 export const Blog = () => {
   const [ articles, setArticles ] = useState([]);
