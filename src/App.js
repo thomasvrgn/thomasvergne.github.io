@@ -12,12 +12,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import { Author } from './Author';
 
 export const App = () => {
   return <main className="dark:bg-gray-800">
     <Router>
       <Navbar />
       <Switch>
+        <Route path="/author/:slug">
+          <Author />
+        </Route>
         <Route path="/blog/:slug">
           <Article />
         </Route>
