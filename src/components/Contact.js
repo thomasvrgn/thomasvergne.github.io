@@ -63,11 +63,11 @@ export const Contact = () => {
           Nom du projet
         </Input>
         <Input id="price" onChange={setInput}>
-          Budget théorique <span className="text-xs text-white text-opacity-40">(en euro)</span>
+          Budget théorique <span className="text-xs text-white text-opacity-50">(en euro)</span>
         </Input>
         <Input id="about" textarea onChange={setInput}>
           Dites-m'en plus<br />
-          <ul className="text-xs dark:text-white text-gray-900 dark:text-opacity-40 text-opacity-40 list-disc list-inside mb-1 ml-2">
+          <ul className="text-xs dark:text-white text-gray-900 dark:text-opacity-50 text-opacity-100 list-disc list-inside mb-1 ml-2">
             <li>Temps de rendu voulu</li>
             <li>Moyens de contact</li>
             <li>Technologies à utiliser</li>

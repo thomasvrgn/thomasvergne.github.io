@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Title } from './utils/Title';
 import { Button } from './utils/Button';
+import { Octokit } from '@octokit/rest';
 
 export const Projects = () => {
   const [informations, setInformation] = useState([]);
@@ -76,10 +77,15 @@ export const Card = ({ response }) => {
     </div>
   </div>
 }
-
+const { REACT_APP_API_TOKEN } = process.env;
+const octo = new Octokit({
+  auth: REACT_APP_API_TOKEN,
+});
 export const githubUser = 'Thomas';
 export const fetchRepository = async (username = githubUser, repository) => {
-  const response = await fetch(`https://api.github.com/repos/${username}/${repository}`);
-  const json = await response.json();
-  return json;
+  const res = await octo.repos.get({
+    owner: username,
+    repo: repository,
+  });
+  return res.data;
 }

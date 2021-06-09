@@ -4,7 +4,7 @@ import { faBolt, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 
 export const Features = () => <section id="features">
   <Title>Avantages</Title>
-  <ul className="pt-8 space-y-6 md:space-y-0 lg:gap-4 gap-y-6 xl:gap-5 md:flex flex-row flex-wrap">
+  <div className="pt-8 space-y-6 md:space-y-0 lg:gap-4 gap-y-6 xl:gap-5 md:flex flex-row flex-wrap">
     <Feature icon={faBolt}>
       <h1>Rapidité</h1>
       <p>Les services que je propose sont rendus dans un temps défiant toute concurrence pour vous garantir une opérationnalité la plus rapide</p>
@@ -17,7 +17,7 @@ export const Features = () => <section id="features">
       <h1>Qualité</h1>
       <p>Un service toujours soigné, avec une assistance lors de l'installation si besoin est, une documentation pouvant être ajoutée...</p>
     </Feature>
-  </ul>
+  </div>
 </section>
 
 export const Feature = ({ icon, children }) => {
