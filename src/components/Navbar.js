@@ -27,21 +27,21 @@ export function Navbar() {
       </a>
     </div>
     <ul className="flex flex-col xl:flex-row xl:flex-initial space-y-2 xl:space-y-0 xl:space-x-4 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150 dark:children:hover:text-white xl:w-6/12 xl:justify-end">
-      <a href="#presentation">
+      <Link to="/#presentation">
         Présentation
-      </a>
-      <a href="#skills">
+      </Link>
+      <Link to="/#skills">
         Compétences
-      </a>
-      <a href="#features">
+      </Link>
+      <Link to="/#features">
         Avantages
-      </a>
-      <a href="#projects">
+      </Link>
+      <Link to="/#projects">
         Projets
-      </a>
-      <a href="#contact">
+      </Link>
+      <Link to="/#contact">
         Moyens de contact
-      </a>
+      </Link>
       <Link to="/blog">
         Blog
       </Link>
