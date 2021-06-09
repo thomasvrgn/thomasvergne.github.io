@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { fetchRouter, getArticle } from './utils/article';
 import './assets/article.css';
+import { Link } from 'react-router-dom';
 
 const formatTimestamp = timestamp => {
   const date = new Date(timestamp)
@@ -29,13 +30,13 @@ export const Article = () => {
   
   return <section>
     {article && user && (<section className="lg:w-2/3 xl:w-1/2 lg:mx-auto">
-      <div className="flex flex-row m-6 lg:mx-0">
+      <Link to={`/author/${article.author}`} className="flex flex-row m-6 lg:mx-0">
         <img src={`https://avatars.githubusercontent.com/${article.author}`} className="w-16 h-16 rounded-full shadow-lg" alt="" />
-        <div className="flex justify-center flex-col text-white ml-4">
+        <div className="flex justify-center flex-col text-gray-700 dark:text-white ml-4">
           <h1 className="text-xl font-medium leading-4">Thomas</h1>
           <span className="opacity-70">Posté le {formatTimestamp(article.date)[0] + ' à ' + formatTimestamp(article.date)[1]}</span>
         </div>
-      </div>
+      </Link>
       <div id="article" className="mx-6 lg:m-0" dangerouslySetInnerHTML={{ __html: content }} />
     </section>)}
   </section>
