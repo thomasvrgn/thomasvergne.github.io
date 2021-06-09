@@ -30,7 +30,7 @@ export const Search = () => {
   }, [input]);
 
   return <div className="px-8 my-8 lg:px-0">
-    <input type="text" className="bg-gray-900 text-white py-2 px-4 w-full lg:w-96 rounded-xl focus:outline-none" onKeyDown={(e) => setInput(e.target.value)} placeholder="Rechercher un article..." />
+    <input type="text" className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-white py-2 px-4 w-full lg:w-96 rounded-xl focus:outline-none" onKeyDown={(e) => setInput(e.target.value)} placeholder="Rechercher un article..." />
     {articles && results && results.length > 0 && (
       <ul className="py-4 space-y-8 flex flex-col lg:space-y-0 lg:gap-x-8 lg:flex-row lg:children:w-1/2">
         {results.map(({ item }, i) => <ArticleCard key={i} article={item} />)}
