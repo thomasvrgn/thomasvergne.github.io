@@ -1,4 +1,4 @@
-import path from 'path';
+import fetch from 'node-fetch';
 
 export const fetchRouter = async () => {
   const res = await fetch('https://raw.githubusercontent.com/thomasvergne/portfolio-experiments/blog/routing.json');
@@ -8,7 +8,7 @@ export const fetchRouter = async () => {
 }
 
 export const getArticle = async (url) => {
-  const res = await fetch(path.join('https://raw.githubusercontent.com/thomasvergne/portfolio-experiments/blog/', url));
+  const res = await fetch('https://raw.githubusercontent.com/thomasvergne/portfolio-experiments/blog/' + url);
   const raw = await res.text();
 
   return raw;
