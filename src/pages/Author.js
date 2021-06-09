@@ -40,12 +40,12 @@ export const Author = () => {
               <h1 className="font-semibold text-2xl lg:text-3xl leading-6 flex flex-row items-center">
                 {user.name}
                 {'plan' in user && user.plan.name === 'pro' && (
-                  <span className="ml-2 mt-1 text-sm bg-emerald-300 text-white bg-opacity-40 py-[1px] px-3 rounded-full uppercase">pro</span>
+                  <span className="ml-2 mt-1 text-sm bg-emerald-200 text-emerald-700 dark:bg-emerald-300 dark:text-white dark:bg-opacity-40 py-[1px] px-3 rounded-full uppercase">pro</span>
                 )}
               </h1>
-              <p className="opacity-60">
+              <a className="opacity-60" href={`https://github.com/${user.login}`} target="_blank" rel="noreferrer">
                 @{user.login}
-              </p>
+              </a>
             </div>
             <div className="flex-auto flex flex-col children:leading-5 items-end mt-2 dark:text-white">
               <span>
