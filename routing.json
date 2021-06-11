@@ -21,5 +21,18 @@
       "date": 1623227669685
     }
   ],
-  "tags": ["dev", "life"]
+  "tags": [
+    {
+      "name": "Développement",
+      "slug": "dev",
+      "description": "Posts en lien avec la programmation informatique",
+      "image": "https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg"
+    },
+    {
+      "name": "Vie",
+      "slug": "life",
+      "description": "Articles en rapport avec la vie réelle.",
+      "image": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+    }
+  ]
 }
