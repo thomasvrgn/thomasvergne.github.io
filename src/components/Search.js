@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { ArticleContext } from "../context/ArticleContext";
 import Fuse from 'fuse.js';
-import { ArticleCard } from "../pages/Blog";
+import { ArticleCard } from "../pages/blog/Blog";
 
 const searchForArticle = (article, articles) => {
   const options = {
