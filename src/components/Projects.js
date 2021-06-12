@@ -1,37 +1,23 @@
 import { useEffect, useState } from 'react';
 import { Title } from './utils/Title';
 import { Button } from './utils/Button';
-import { Octokit } from '@octokit/rest';
+import { octo } from '../utils/api';
+import fetch from 'node-fetch';
 
 export const Projects = () => {
   const [informations, setInformation] = useState([]);
 
-  const projects = [
-    { username: 'thomasvergne', repository: 'haskell-vm', name: 'Haskell VM' },
-    { username: 'thomasvergne', repository: 'haskell-brainfuck', name: 'Haskell Brainfuck' },
-    { username: 'quark-lang', repository: 'quark', },
-    { username: 'thomasvergne', repository: 'make-your-text-great-again' },
-    { username: 'thomasvergne', repository: 'graphix-website', },
-    { username: 'thomasvergne', repository: 'tailwindui', name: 'TailwindUI' }
-  ];
-
   useEffect(() => {
-    const fetchData = async () => {
-      const result = [];
-      for (const { username, repository, name } of projects) {
-        const res = await fetchRepository(username, repository);
-        result.push(name !== undefined ? {...res, name} : res);
-      }
-      return result;
-    }
-    fetchData().then(setInformation);
+    fetch('https://gh-pinned-repos-5l2i19um3.vercel.app/?username=thomasvergne')
+      .then(x => x.json())
+      .then(setInformation)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <section id="projects">
     <Title>Projets</Title>
-    <div className="pt-8 space-y-6 md:flex md:space-y-0 flex-wrap gap-5">
-      {informations.map((response, index) => <Card response={response} key={index} />)}
+    <div className="pt-8 space-y-6 lg:flex lg:space-y-0 flex-wrap gap-5">
+      {informations && Array.isArray(informations) && informations.map((response, index) => <Card response={response} key={index} />)}
     </div>
   </section>
 };
@@ -54,33 +40,33 @@ const Language = ({ language }) => <div className="flex flex-row items-center">
 </div>
 
 const formatName = (name) => name[0].toUpperCase() + name.slice(1).replace(/-/g, ' ');
+const formatDescription = (description, maxLength = 50) => 
+  description.slice(0, maxLength).length < description.length
+    ? description.slice(0, maxLength) + '...'
+    : description;
 
 export const Card = ({ response }) => {
-  const { description, html_url, name, language, owner } = response;
-  const { login} = owner;
-
-  return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg min-h-56 md:min-h-64 flex flex-col md:w-[48%] lg:w-[32%]">
+  const { description, link, repo, language, owner } = response;
+  
+  return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg min-h-56 lg:min-h-64 flex flex-col lg:w-[48%] xl:w-[32%]">
     <header className="mb-4 flex-auto">
       <div className="flex flex-row items-center md:flex-col md:items-start lg:items-center lg:flex-row">
-        <h1 className="flex-auto text-2xl font-medium dark:text-white text-gray-700">{formatName(name)}</h1>
-        <span className="flex flex-auto justify-end dark:text-white text-opacity-75 text-gray-700">{login}</span>
+        <h1 className="flex-auto text-2xl font-medium dark:text-white text-gray-700">{formatName(repo)}</h1>
+        <span className="flex flex-auto justify-end dark:text-white text-opacity-75 text-gray-700">{owner}</span>
       </div>
-      <p className="mt-1 text-lg dark:font-light dark:text-white dark:text-opacity-50 text-gray-600 text-opacity-70">{description}</p>
+      <p className="mt-1 text-lg dark:font-light dark:text-white dark:text-opacity-50 text-gray-600 text-opacity-70">{formatDescription(description, 125)}</p>
     </header>
     <div className="flex flex-row items-end">
       <div className="flex-auto">
         <Language language={language} />
       </div>
       <div className="flex flex-auto justify-end">
-        <Button coloured href={html_url} blank>Accéder</Button>
+        <Button coloured href={link} blank>Accéder</Button>
       </div>
     </div>
   </div>
 }
-const { REACT_APP_API_TOKEN } = process.env;
-const octo = new Octokit({
-  auth: REACT_APP_API_TOKEN,
-});
+
 export const githubUser = 'Thomas';
 export const fetchRepository = async (username = githubUser, repository) => {
   const res = await octo.repos.get({
