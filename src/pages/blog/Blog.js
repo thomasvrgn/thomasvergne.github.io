@@ -75,10 +75,10 @@ export const ArticleCard = ({ article }) => {
       return history.push(`/blog/${article.slug}`)
   }
 
-  return <div className="cursor-pointer" onClick={handleClick}>
+  return <div className="cursor-pointer group" onClick={handleClick}>
     <div className="relative h-64 lg:h-96">
       <img src={article.image} alt="" className="h-full w-full object-cover rounded-xl shadow-lg" />
-      <span className="absolute inset-0 h-full w-full bg-black bg-opacity-50 backdrop-blur-[2px] backdrop-filter rounded-xl hover:backdrop-blur-[8px] transition-all duration-200 hover:bg-opacity-[.55]" />
+      <span className="absolute inset-0 h-full w-full bg-black bg-opacity-50 backdrop-blur-[2px] backdrop-filter rounded-xl group-hover:backdrop-blur-[8px] transition-all duration-200 group-hover:bg-opacity-[.55]" />
       <div className="absolute bottom-0 left-0 w-full my-3 px-3 lg:p-8 lg:my-0 text-white">
         <div className="flex flex-row items-center">
           <h1 className="text-xl font-semibold tracking-wide">{article.title}</h1>
