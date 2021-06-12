@@ -1,24 +1,20 @@
 import { useParams } from 'react-router';
-import { Octokit } from '@octokit/rest';
 import { useEffect, useState } from 'react';
-import { fetchRouter } from '../utils/article';
-import { ArticleCard } from './Blog';
+import { ArticleCard } from '../blog/Blog';
+import { octo, articles as fetched } from '../../utils/api';
 
 export const Author = () => {
   const { slug } = useParams();
-  const { REACT_APP_API_TOKEN } = process.env;
   const [ user, setUser ] = useState(undefined);
   const [ articles, setArticles ] = useState();
-  const octo = new Octokit({
-    auth: REACT_APP_API_TOKEN,
-  });
 
   useEffect(() => {
     octo.users.getByUsername({
       username: slug,
     }).then(x => {
       setUser(x.data)
-      fetchRouter().then(({ articles }) => {
+      document.title = `Thomas Vergne - ${x.data.name}`;
+      fetched.then(({ articles }) => {
         setArticles(articles.filter(x => x.author === slug));
       })
     })
