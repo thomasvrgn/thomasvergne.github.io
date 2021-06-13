@@ -19,6 +19,16 @@
       "tags": ["dev"],
       "image": "https://www.actimage.com/wp-content/uploads/2018/07/bg-dev-web-01-1.jpg",
       "date": 1623227669685
+    },
+    {
+      "title": "EasyMDE test",
+      "slug": "easy-mde-test",
+      "description": "Some markdown tests in order to write CSS",
+      "url": "./articles/dev/easy-mde-test.md",
+      "author": "thomasvergne",
+      "tags": ["dev"],
+      "image": "https://www.actimage.com/wp-content/uploads/2018/07/bg-dev-web-01-1.jpg",
+      "date": 1623227669685
     }
   ],
   "tags": [
