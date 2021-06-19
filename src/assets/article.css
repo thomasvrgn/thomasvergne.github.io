@@ -12,6 +12,7 @@
 
 #article p {
   @apply opacity-70;
+  line-height: 1.65rem;
 }
 
 #article ul {
@@ -44,6 +45,17 @@
 
 #article pre::-webkit-scrollbar {
   width: 50px;
+}
+
+#article pre code {
+  padding: 0;
+}
+
+#article code {
+  @apply bg-gray-100 dark:bg-gray-900 rounded-md;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 400;
+  padding: 0.2rem 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
