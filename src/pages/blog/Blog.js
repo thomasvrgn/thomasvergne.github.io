@@ -68,6 +68,7 @@ export const ArticleCard = ({ article }) => {
         ? setTime(`${seconds_} seconde${seconds_ > 1 ? 's' : ''}`)
         : setTime(`${minutes} minute${minutes > 1 ? 's' : ''} et ${seconds_} secondes`);
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleClick = (e) => {
