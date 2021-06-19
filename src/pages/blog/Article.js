@@ -5,6 +5,10 @@ import { getArticle } from '../../utils/article';
 import '../../assets/article.css';
 import { Link } from 'react-router-dom';
 import { articles as fetched, octo } from '../../utils/api';
+import Highlight from 'highlight.js';
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+import(`highlight.js/styles/atom-one-${matched ? 'dark' : 'light'}.css`);
 
 const formatTimestamp = timestamp => {
   const date = new Date(timestamp)
@@ -19,6 +23,7 @@ export const Article = () => {
   const { slug } = useParams();
 
   useEffect(() => {
+    Highlight.highlightAll();
     fetched.then(articles => {
       const found = articles.articles.find(x => x.slug === slug);
       setArticle(found);
@@ -28,7 +33,9 @@ export const Article = () => {
         .then(x => x.data)
         .then(usr => setUser(usr));
 
-      getArticle(found.url).then(content => setContent(marked(content)));
+      getArticle(found.url).then(content => {
+        setContent(marked(content));
+      });
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
