@@ -16,6 +16,7 @@
     "dotenv": "^10.0.0",
     "fuse.js": "^6.4.6",
     "gh-pages": "^3.1.0",
+    "highlight.js": "^11.0.1",
     "marked": "^2.0.7",
     "node-fetch": "^2.6.1",
     "react": "^17.0.2",
