@@ -4,9 +4,9 @@ De manière générale, un foncteur est un élément faisant parti du principe d
 C'est pour cela que je vais vous l'expliquer dès à présent dans cet article en me basant sur le Haskell principalement.
 
 **Cet article nécessite des connaissances de base en Haskell telles que :**
-	- Fonctions de mapping
-	- Principe des typeclasses et types
-	- Compréhension de la signature des fonctions
+  - Fonctions de mapping
+  - Principe des typeclasses et types
+  - Compréhension de la signature des fonctions
 *Il reste néanmoins accessible à toute personne ayant de l'expérience avec la programmation fonctionnelle ou la programmation fortement typée.*
 
 ### Un outil que tout développeur a déjà utilisé
