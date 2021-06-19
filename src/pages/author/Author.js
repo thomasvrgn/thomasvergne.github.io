@@ -60,7 +60,7 @@ export const Author = () => {
             ? (
               <div>
                 <h1 className="text-2xl font-bold text-white tracking-wide">Articles publiés</h1>
-                <ul className="mt-6 space-y-8 lg:space-y-0 lg:gap-x-8 flex flex-col lg:flex-row lg:children:w-1/2 lg:mx-0">
+                <ul className="mt-6 space-y-8 lg:space-y-0 lg:gap-8 flex flex-col lg:flex-row lg:children:w-[48%] flex-wrap lg:mx-0">
                   {articles.map((x, i) => <ArticleCard article={x} key={i} />)}
                 </ul>
               </div>

@@ -20,7 +20,7 @@ export const Blog = () => {
       <Search />
     </ArticleContext.Provider>
     {!areResults && (
-      <section className="mx-6 space-y-8 lg:space-y-0 lg:gap-x-8 flex flex-col lg:flex-row lg:children:w-1/2 lg:mx-0">
+      <section className="mx-6 space-y-8 lg:space-y-0 lg:gap-8 flex flex-col lg:flex-row lg:children:w-[48%] lg:mx-0 flex-wrap">
         {articles && articles.map((x, i) => <ArticleCard article={x} key={i} />)}
       </section>
     )}
@@ -68,7 +68,7 @@ export const ArticleCard = ({ article }) => {
         ? setTime(`${seconds_} seconde${seconds_ > 1 ? 's' : ''}`)
         : setTime(`${minutes} minute${minutes > 1 ? 's' : ''} et ${seconds_} secondes`);
     })
-  });
+  }, []);
 
   const handleClick = (e) => {
     if (!isDescendant(author.current, e.target) && !isDescendant(tags.current, e.target))
@@ -77,7 +77,7 @@ export const ArticleCard = ({ article }) => {
 
   return <div className="cursor-pointer group" onClick={handleClick}>
     <div className="relative h-64 lg:h-96">
-      <img src={article.image} alt="" className="h-full w-full object-cover rounded-xl shadow-lg" />
+      <img src={article.image || 'https://i.stack.imgur.com/y9DpT.jpg'} alt="" className="h-full w-full object-cover rounded-xl shadow-lg" />
       <span className="absolute inset-0 h-full w-full bg-black bg-opacity-50 backdrop-blur-[2px] backdrop-filter rounded-xl group-hover:backdrop-blur-[8px] transition-all duration-200 group-hover:bg-opacity-[.55]" />
       <div className="absolute bottom-0 left-0 w-full my-3 px-3 lg:p-8 lg:my-0 text-white">
         <div className="flex flex-row items-center">
