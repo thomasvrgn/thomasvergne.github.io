@@ -1,13 +1,13 @@
 import marked from 'marked';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router';
 import { getArticle } from '../../utils/article';
 import '../../assets/article.css';
 import { Link } from 'react-router-dom';
 import { articles as fetched, octo } from '../../utils/api';
 import Highlight from 'highlight.js';
-
 let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 import(`highlight.js/styles/atom-one-${matched ? 'dark' : 'light'}.css`);
 
 const formatTimestamp = timestamp => {
@@ -21,6 +21,7 @@ export const Article = () => {
   const [ article, setArticle ] = useState();
   const [ user, setUser ] = useState();
   const { slug } = useParams();
+  const container = useRef(null);
 
   useEffect(() => {
     Highlight.highlightAll();
@@ -34,7 +35,30 @@ export const Article = () => {
         .then(usr => setUser(usr));
 
       getArticle(found.url).then(content => {
-        setContent(marked(content));
+        let parsed = marked(content);
+        const found = parsed.match(/<code class=".*?">(.|\n)*?<\/code>/gm);
+        if (!found) return;
+        for (const match of found) {
+          const code = new DOMParser().parseFromString(match, 'application/xml');
+
+          const [language] = code
+            .getElementsByTagName('code')[0]
+            .classList;
+
+          const value = code
+            .getElementsByTagName('code')[0]
+            .textContent;
+
+          const new_ = Highlight.highlight(value, { 
+            language: language.replace('language-', ''), 
+          }).value;
+
+          parsed = parsed.replace(
+            match, 
+            `<code class="${language}">${new_}</code>`
+          );
+        }
+        setContent(parsed);
       });
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,7 +73,7 @@ export const Article = () => {
           <span className="opacity-70">Posté le {formatTimestamp(article.date)[0] + ' à ' + formatTimestamp(article.date)[1]}</span>
         </div>
       </Link>
-      <div id="article" className="mx-6 lg:m-0" dangerouslySetInnerHTML={{ __html: content }} />
+      <div id="article" ref={container} className="mx-6 lg:m-0" dangerouslySetInnerHTML={{ __html: content }} />
     </section>)}
   </section>
 };
