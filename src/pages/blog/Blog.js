@@ -87,7 +87,7 @@ export const ArticleCard = ({ article }) => {
         </div>
         <p className="opacity-60 w-3/4">{article.description}</p>
       </div>
-      <div className="absolute flex flex-row top-0 left-0 space-x-2 p-4 lg:p-8" ref={tags}>
+      <div className="absolute flex flex-row top-0 left-0 space-x-2 p-4 lg:p-8 max-w-[50%] xl:max-w-[60%] 2xl:max-w-[75%] overflow-x-hidden" ref={tags}>
         {article.tags.map((tag, i) => (
           <Link to={`/tags/${tag}`} key={i}>
             <span className="bg-emerald-300 bg-opacity-20 py-1 px-3 rounded-full text-white font-medium text-sm min-w-[3.5rem] text-center backdrop-filter backdrop-blur-md">
@@ -96,7 +96,7 @@ export const ArticleCard = ({ article }) => {
           </Link>
         ))}
       </div>
-      <Link to={`/authors/${article.author}`} ref={author} className="absolute top-0 right-0 p-4 lg:p-8 flex flex-row items-center">
+      <Link to={`/authors/${article.author}`} ref={author} className="absolute top-0 right-0 p-3 lg:p-[1.85rem] flex flex-row items-center">
         <span className="text-white">{article.author}</span>
         <img src={`https://avatars.githubusercontent.com/${article.author}`} className="w-8 rounded-full ml-2 lg:ml-4" alt="" />
       </Link>
