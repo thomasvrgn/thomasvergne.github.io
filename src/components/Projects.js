@@ -39,7 +39,7 @@ const Language = ({ language }) => <div className="flex flex-row items-center">
   <h1 className="ml-2 font-medium dark:text-white text-gray-600">{language}</h1>
 </div>
 
-const formatName = (name) => name[0].toUpperCase() + name.slice(1).replace(/-/g, ' ');
+export const formatName = (name) => name[0].toUpperCase() + name.slice(1).replace(/-/g, ' ');
 const formatDescription = (description, maxLength = 50) => 
   description.slice(0, maxLength).length < description.length
     ? description.slice(0, maxLength) + '...'
