@@ -6,4 +6,7 @@ export const octo = new Octokit({
   auth: REACT_APP_API_TOKEN,
 });
 
-export const articles = fetchRouter().then(x => x.articles.reverse());
+export const articles = fetchRouter().then(x => { 
+  x.articles.reverse();
+  return x;
+});
