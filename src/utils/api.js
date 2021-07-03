@@ -10,3 +10,5 @@ export const articles = fetchRouter().then(x => {
   x.articles.reverse();
   return x;
 });
+
+export const filterArticlesByTag = async (tag, router) => router.articles.filter(x => x.tags.includes(tag));
