@@ -49,6 +49,16 @@
      "image": "https://bartoszmilewski.files.wordpress.com/2015/01/functor.jpg",
      "url": "./articles/understanding-functors.md",
      "tags": ["haskell", "functors", "functional", "learn"]
+   },
+   {
+    "author": "thomasvergne",
+    "date": 1625302366997,
+    "description": "Découvrez le Python sous une nouvelle facette plus technique !",
+    "title": "Python n'est pas seulement interprété",
+    "slug": "python-not-only-interpreted",
+    "image": "https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2020/06/25/node_769559/47491721/public/2020/06/25/B9723837573Z.1_20200625171736_000%2BG5GG7RQ1H.1-0.png.jpg?itok=dw9kasJi1593098492",
+    "url": "./articles/python-not-only-interpreted.md",
+    "tags": ["python", "bytecode", "vm", "interpreted", "compilation"]
    }
  ],
  "tags":[{"name":"Développement","slug":"dev","description":"Posts en lien avec la programmation informatique","image":"https://d1fmx1rbmqrxrr.cloudfront.net/cnet/optim/i/edit/2019/04/eso1644bsmall__w770.jpg"},{"name":"Vie","slug":"life","description":"Articles en rapport avec la vie réelle.","image":"https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"}]}
