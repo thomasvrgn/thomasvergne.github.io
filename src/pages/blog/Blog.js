@@ -87,7 +87,7 @@ export const ArticleCard = ({ article }) => {
         </div>
         <p className="opacity-60 w-3/4">{article.description}</p>
       </div>
-      <div className="absolute flex flex-row top-0 left-0 space-x-2 p-4 lg:p-8 max-w-[50%] xl:max-w-[60%] 2xl:max-w-[75%] overflow-x-hidden" ref={tags}>
+      <div className="absolute flex flex-row top-0 left-0 space-x-2 p-4 lg:p-8 max-w-[50%] lg:max-w-[65%] lg:flex-wrap lg:space-x-0 lg:gap-4 overflow-x-hidden" ref={tags}>
         {article.tags.map((tag, i) => (
           <Link to={`/tags/${tag}`} key={i}>
             <span className="bg-emerald-300 bg-opacity-20 py-1 px-3 rounded-full text-white font-medium text-sm min-w-[3.5rem] text-center backdrop-filter backdrop-blur-md">
