@@ -11,7 +11,7 @@ export const Blog = () => {
   const [ areResults, setResultState ] = useState(false);
   useEffect(() => {
     fetched.then(x => {
-      setArticles(x.articles.reverse());
+      setArticles(x.articles);
       document.title = `Thomas Vergne - Blog`;
     });
   }, []);
