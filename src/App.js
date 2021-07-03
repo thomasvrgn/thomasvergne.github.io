@@ -15,6 +15,7 @@ import { Tag } from './pages/tags/Tag';
 
 import { Author } from './pages/author/Author';
 import { Authors } from './pages/author/Authors';
+import { Error } from './pages/Error';
 
 export const App = () => {
   return <main className="dark:bg-gray-800">
@@ -39,8 +40,11 @@ export const App = () => {
         <Route path="/blog">
           <Blog />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/*">
+          <Error />
         </Route>
       </Switch>
       <Footer />
