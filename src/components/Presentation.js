@@ -9,7 +9,7 @@ export const Presentation = () => {
     <p className="mt-4 text-gray-600 text-opacity-90 dark:text-white dark:text-opacity-60">
       Je m'appelle Thomas et ai actuellement 15 ans. Je suis passionné désormais depuis 5 ans par l'informatique et un peu moins de deux ans par les mathématiques. J'ai commencé la conception de langages en cette année 2020.<br /><br />
 
-      <span className="text-lg font-medium text-emerald-800 dark:text-emerald-300">
+      <span className="text-lg font-medium text-blue-800 dark:text-blue-300">
         N'hésitez pas à me poser des questions depuis mes moyens de contact...
       </span><br/><br/>
 

@@ -5,7 +5,7 @@ export const Error = () => <section className="m-8">
       La page demandée n'existe pas.<br />
       Vérifiez si une faute n'a pas été commise dans l'URL. Si le problème persiste, contactez l'administrateur :
     </p> 
-    <a href="mailto:thomas@quark-lang.dev" className="text-emerald-400 dark:text-emerald-300">
+    <a href="mailto:thomas@quark-lang.dev" className="text-blue-400 dark:text-blue-300">
       thomas@quark-lang.dev
     </a>
   </div>

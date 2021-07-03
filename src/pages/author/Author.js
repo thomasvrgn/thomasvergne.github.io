@@ -36,7 +36,7 @@ export const Author = () => {
               <h1 className="font-semibold text-2xl lg:text-3xl leading-6 flex flex-row items-center">
                 {user.name}
                 {'plan' in user && user.plan.name === 'pro' && (
-                  <span className="ml-2 mt-1 text-sm bg-emerald-200 text-emerald-700 dark:bg-emerald-300 dark:text-white dark:bg-opacity-40 py-[1px] px-3 rounded-full uppercase">pro</span>
+                  <span className="ml-2 mt-1 text-sm bg-blue-200 text-blue-700 dark:bg-blue-300 dark:text-white dark:bg-opacity-40 py-[1px] px-3 rounded-full uppercase">pro</span>
                 )}
               </h1>
               <a className="opacity-60" href={`https://github.com/${user.login}`} target="_blank" rel="noreferrer">

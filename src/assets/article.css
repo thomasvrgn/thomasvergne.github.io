@@ -32,7 +32,7 @@
 }
 
 #article a {
-  @apply text-emerald-500 dark:text-emerald-300 hover:underline;
+  @apply text-blue-500 dark:text-blue-300 hover:underline;
 }
 
 #article pre {

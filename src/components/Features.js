@@ -24,7 +24,7 @@ export const Feature = ({ icon, children }) => {
   const [title, subtitle] = children;
   return <div className="flex flex-row items-start group dark:hover:bg-gray-900 dark:hover:bg-opacity-30 rounded-xl p-4 dark:transform hover:-translate-y-1 transition-all duration-500 hover:cursor-pointer dark:hover:shadow-lg md:w-[48%] lg:w-[32%] md:flex-col lg:p-8">
     <div className="mr-4">
-      <div className="w-16 h-16 relative bg-emerald-500 text-4xl shadow-lg flex items-center justify-center rounded-xl text-white transform transition-transform duration-500 group-hover:scale-110">
+      <div className="w-16 h-16 relative bg-blue-600 text-4xl shadow-lg flex items-center justify-center rounded-xl text-white transform transition-transform duration-500 group-hover:scale-110">
         <FontAwesomeIcon icon={icon} />
       </div>
     </div>
