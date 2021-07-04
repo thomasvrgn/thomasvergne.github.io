@@ -65,6 +65,7 @@ export const Tickets = ({ session }) => {
     } else {
       return window.location.assign('/login');
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const title = useRef(null);

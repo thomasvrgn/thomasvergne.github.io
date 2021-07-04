@@ -46,6 +46,7 @@ export const Dashboard = ({ session }) => {
           }
         });
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const date = new Date().getHours();
   const signOut = () => {
