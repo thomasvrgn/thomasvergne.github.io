@@ -54,7 +54,7 @@ export const Dashboard = ({ session }) => {
   }
   
   return informations && <section className="my-24 mx-8 lg:w-2/3 lg:mx-auto ">
-    <header className="mb-8 flex flex-row items-center">
+    <header className="mb-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center">
       <h1 className="text-xl text-white flec flex-auto">
         <span className="opacity-60 text-lg">
           {date < 18 && date > 6 ? 'Bonjour' : 'Bonsoir'} 
