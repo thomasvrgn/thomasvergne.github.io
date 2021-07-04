@@ -16,12 +16,25 @@ import { Tag } from './pages/tags/Tag';
 import { Author } from './pages/author/Author';
 import { Authors } from './pages/author/Authors';
 import { Error } from './pages/Error';
+import { Login, supabase } from './pages/Login';
+import { useState } from 'react';
+import { Dashboard } from './pages/dashboard/Dashboard';
 
 export const App = () => {
+  const [session, setSession] = useState(null);
+  supabase.auth.onAuthStateChange((e, s) => e === 'SIGNED_IN'
+    ? setSession(s)
+    : null);
   return <main className="dark:bg-gray-800">
     <Router>
-      <Navbar />
+      <Navbar session={session} />
       <Switch>
+        <Route path="/dashboard">
+          <Dashboard session={session} />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
         <Route path="/tags/:slug">
           <Tag />
         </Route>
