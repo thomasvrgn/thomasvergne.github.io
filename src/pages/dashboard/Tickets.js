@@ -85,7 +85,7 @@ export const Tickets = ({ session }) => {
           </div>
         </div>
         <div className="space-y-8 flex flex-col lg:flex-row lg:space-y-0 lg:gap-8 flex-wrap items">
-          {order && order.tickets.map((x, i) => {
+          {(order && order.tickets.length > 0) && order.tickets.map((x, i) => {
             const [title, content] = x.split(':');
             return <div className="bg-gray-900 p-8 relative rounded-2xl shadow-2xl lg:w-[47%] xl:w-[31%]" key={i}>
               <span className="text-xl font-medium text-white">{title}</span>
@@ -95,6 +95,9 @@ export const Tickets = ({ session }) => {
               </button>
             </div>
           })}
+          {(!order || order.tickets.length === 0) && <p className="text-lg text-white font-medium">
+              Aucun ticket trouvé
+            </p>}
         </div>
         <form onSubmit={e => { e.preventDefault(); pushTicket(session, id, title, subtitle, [order, setOrder]) }} className="bg-gray-900 bg-opacity-50 p-8 space-y-4 rounded-2xl mt-24 shadow-xl lg:mx-auto lg:w-1/2">
           <header>
