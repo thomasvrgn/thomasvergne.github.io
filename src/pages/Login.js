@@ -38,7 +38,7 @@ export const Login = () => {
       </div>}
     <form
       onSubmit={async e => { e.preventDefault(); await performLogin(); }}
-      className="flex flex-col w-full m-8 dark:bg-gray-900 dark:bg-opacity-50 p-8 rounded-2xl border dark:border-none dark:shadow-xl lg:w-1/2 xl:w-1/3">
+      className="flex flex-col w-full m-8 dark:bg-gray-900 dark:bg-opacity-50 p-8 rounded-2xl border dark:border-none dark:shadow-xl lg:w-1/2 xl:w-1/3 2xl:w-1/4">
       <header className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white">
           Connexion
