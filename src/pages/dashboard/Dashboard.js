@@ -37,7 +37,7 @@ export const Dashboard = ({ session }) => {
             const id = idify(command);
             const { error, data: project } = await supabase
               .from('orders')
-              .select('id, date, description, type, project_name, website_url, state')
+              .select('id, date, description, type, project_name, website_url, state, background_image')
               .eq('id', id);
             if (error) continue;
             const date = new Date(Date.parse(project[0].date));
@@ -54,9 +54,9 @@ export const Dashboard = ({ session }) => {
     window.location.assign('/login');
   }
   
-  return informations && <section className="my-24 mx-8 lg:w-2/3 lg:mx-auto ">
+  return informations && <section className="my-24 mx-8  lg:w-5/6 xl:w-2/3 lg:mx-auto ">
     <header className="mb-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center">
-      <h1 className="text-xl text-white flec flex-auto">
+      <h1 className="text-xl text-gray-800 dark:text-white flec flex-auto">
         <span className="opacity-60 text-lg">
           {date < 18 && date > 6 ? 'Bonjour' : 'Bonsoir'} 
         </span>
@@ -75,7 +75,7 @@ export const Dashboard = ({ session }) => {
         </Button>
       </div>
     </header>
-    <hr className="opacity-25 mb-6" />
+    <hr className="dark:opacity-25 mb-6" />
     <Switch>
       <Route path="/dashboard/tickets/:id">
         <Tickets session={session} />
@@ -83,31 +83,31 @@ export const Dashboard = ({ session }) => {
       <Route exact path="/dashboard">
         <div className="lg:mt-8">
           <div className="flex flex-col my-4 lg:flex-row mt-8 flex-wrap gap-8">
-            {orders && orders.map((x, i) => <div className="bg-gray-900 p-8 flex flex-row rounded-2xl shadow-xl children:w-1/2 flex-wrap gap-y-8 lg:w-[48%]" key={i}>
-              <div className="!w-full bg-gray-800 bg-opacity-50 p-4 rounded-xl flex flex-row items-center">
-                <span className={`block h-4 w-4 ${x.state === 0 ? 'bg-orange-400' : 'bg-green-400'} rounded-full`}></span>
-                <p className="ml-3 font-medium text-white">
+            {orders && orders.map((x, i) => <div className="dark:bg-gray-900 p-8 flex flex-row rounded-2xl bg-white border dark:border-none dark:shadow-xl children:w-1/2 flex-wrap gap-y-8 lg:w-[48%]" key={i}>
+              <div className="!w-full bg-gray-100 dark:bg-gray-800 bg-opacity-50 p-4 rounded-xl flex flex-row ">
+                <span className={`block h-4 w-4 ${x.state === 0 ? 'bg-orange-400' : 'bg-green-400'} rounded-full mt-1`}></span>
+                <p className="ml-3 font-medium text-gray-800 dark:text-white">
                   {x.state === 0
                     ? 'Commande en cours de développement...'
                     : 'Commande terminée...'
                   }
                 </p>
               </div>
-              <div className="flex flex-col text-white">
+              <div className="flex flex-col text-gray-800 dark:text-white">
                 <span className="uppercase font-bold text-sm tracking-wider opacity-60">Nom du projet</span>
                 <span className="leading-5 text-lg">{x.project_name}</span>
               </div>
-              <div className="flex flex-col text-white">
+              <div className="flex flex-col text-gray-800 dark:text-white">
                 <span className="uppercase font-bold text-sm tracking-wider opacity-60">Commande</span>
                 <span className="leading-5 text-lg">{x.type}</span>
               </div>
-              <div className="flex flex-col text-white !w-full">
+              <div className="flex flex-col text-gray-800 dark:text-white !w-full">
                 <span className="uppercase font-bold text-sm tracking-wider opacity-60">
                   Date d'échéance
                 </span>
                 <span className="leading-5 text-lg">{x.date}</span>
               </div>
-              <div className="flex flex-col text-white !w-3/4">
+              <div className="flex flex-col text-gray-800 dark:text-white !w-3/4">
                 <span className="uppercase font-bold text-sm tracking-wider opacity-60">
                   Description
                 </span>
@@ -118,10 +118,10 @@ export const Dashboard = ({ session }) => {
                 </span>
               </div>
               <div className="!w-full relative">
-                <img src={`https://shot.screenshotapi.net/screenshot?&url=${x.website_url}&fresh=true&output=image&file_type=png&wait_for_event=load`} className="w-full h-48 object-cover object-top rounded-2xl shadow-xl" alt="" />
-                <span className="absolute inset-0 h-full w-full bg-black rounded-2xl bg-opacity-25 backdrop-filter backdrop-blur-[1px]"></span>
+                <img src={x.background_image} className="w-full h-48 object-cover object-center rounded-2xl dark:shadow-xl" alt="" />
+                <span className="absolute inset-0 h-full w-full dark:bg-black rounded-2xl bg-opacity-25 backdrop-filter backdrop-blur-[1px] border"></span>
               </div>
-              <div className="flex flex-row space-x-4 !w-full">
+              <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 !w-full">
                 <Link to={'/dashboard/tickets/' + x.id}>
                   <Button coloured>
                     Accéder aux tickets
@@ -132,7 +132,7 @@ export const Dashboard = ({ session }) => {
                 </Button>
               </div>
             </div>)}
-            {(!orders || orders.length === 0) && <p className="text-lg text-white font-medium">
+            {(!orders || orders.length === 0) && <p className="text-lg text-gray-800 dark:text-white font-medium">
               Aucune commande n'a été trouvée !  
             </p>}
           </div>

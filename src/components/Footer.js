@@ -43,7 +43,7 @@ export const Footer = () => {
           </Link>
         </div>
       </div>
-      <hr className="border-gray-700" />
+      <hr className="border-gray-700 border-opacity-20 dark:border-opacity-100" />
       <div className="flex flex-row items-center gap-6 mt-8 children:cursor-pointer">
         {socialNetworks.map(({ icon, href }, index) => (
           <AnchorLink href={href} className="text-3xl text-gray-500 hover:text-gray-400 transition-colors duration-200" blank key={index}>
