@@ -22,11 +22,12 @@ export const Projects = () => {
   </section>
 };
 
-const getColorLanguage = (language) => {
+export const getColorLanguage = (language) => {
   switch (language) {
     case 'TypeScript': return 'bg-blue-600';
     case 'Haskell': return 'bg-indigo-500';
     case 'Vue': return 'bg-blueGray-500';
+    case 'Svelte': return 'bg-red-500';
     case 'JavaScript': return 'bg-yellow-400'
     default: return 'bg-gray-400';
   }
