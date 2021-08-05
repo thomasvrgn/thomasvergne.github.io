@@ -32,6 +32,9 @@ export const Footer = () => {
           <HashLink to="/#features">
             Avantages
           </HashLink>
+          <HashLink to="/#experiences">
+            Expériences
+          </HashLink>
           <HashLink to="/#projects">
             Projets
           </HashLink>

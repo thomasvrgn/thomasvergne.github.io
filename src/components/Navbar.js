@@ -37,14 +37,11 @@ export function Navbar({ session }) {
     </Button>
     </div> */}
     <div className="flex flex-col xl:flex-row xl:flex-auto space-y-3 xl:space-y-0 xl:space-x-4 list-none py-2 dark:text-white text-gray-700 text-opacity-80 font-medium dark:text-opacity-70 children:hover:text-gray-800 children:transition-colors children:duration-150 dark:children:hover:text-white xl:justify-end xl:h-10 xl:items-center">
-      <HashLink to="/#presentation">
-        Présentation
-      </HashLink>
       <HashLink to="/#skills">
         Compétences
       </HashLink>
-      <HashLink to="/#features">
-        Avantages
+      <HashLink to="/#experiences">
+        Expériences
       </HashLink>
       <HashLink to="/#projects">
         Projets
@@ -55,11 +52,13 @@ export function Navbar({ session }) {
       <Link to="/blog">
         Blog
       </Link>
-      <Link to={session !== null ? '/dashboard' : '/login' }>
-        <Button>
-          {session !== null ? 'Espace client'  : 'Connexion'}
-        </Button>
-      </Link>
+      <span className="xl:!ml-16 block">
+        <Link to={session !== null ? '/dashboard' : '/login' }>
+          <Button>
+            {session !== null ? 'Espace client'  : 'Connexion'}
+          </Button>
+        </Link>
+      </span>
     </div>
   </nav>
 }
