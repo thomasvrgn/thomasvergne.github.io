@@ -37,7 +37,7 @@ export const experiences = [
   },
   {
     name: 'Palamazon',
-    role: 'Lead développeur Front-End',
+    role: 'Chef de projet',
     description: `Conception de la première version du site ainsi qu'apport d'aide et gestion du projet de refonte du site internet.`,
     image: 'https://cdn.discordapp.com/attachments/768087687655194675/872827529059254312/unknown.png',
     language: 'Vue',
