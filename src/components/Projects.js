@@ -41,15 +41,15 @@ const Language = ({ language }) => <div className="flex flex-row items-center">
 </div>
 
 export const formatName = (name) => name[0].toUpperCase() + name.slice(1).replace(/-/g, ' ');
-const formatDescription = (description, maxLength = 50) => 
+const formatDescription = (description, maxLength = 50) =>
   description.slice(0, maxLength).length < description.length
     ? description.slice(0, maxLength) + '...'
     : description;
 
 export const Card = ({ response }) => {
   const { description, link, repo, language, owner } = response;
-  
-  return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg min-h-56 lg:min-h-64 flex flex-col lg:w-[48%] xl:w-[32%]">
+
+  return <div className="dark:bg-gray-900 dark:bg-opacity-50 bg-gray-100 p-6 rounded-xl dark:shadow-lg min-h-56 lg:min-h-64 flex flex-col lg:w-[48%] xl:w-[calc(33.333%-1rem)]">
     <header className="mb-4 flex-auto">
       <div className="flex flex-row items-center md:flex-col md:items-start lg:items-center lg:flex-row">
         <h1 className="flex-auto text-2xl font-medium dark:text-white text-gray-700">{formatName(repo)}</h1>
