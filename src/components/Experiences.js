@@ -3,7 +3,7 @@ import { experiences } from './data/experiences.data';
 import { Button } from './utils/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
-import { getColorLanguage } from './Projects'; 
+import { getColorLanguage } from './Projects';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 const useClickOutside = (ref, callback) => {
@@ -30,8 +30,8 @@ export const Experiences = () => <section className="" id="experiences">
     </p>
   </header>
   <div className="mt-8 space-y-8 xl:children:w-[calc(50%-2rem)] 2xl:children:w-[calc(33.3333%-2rem)] flex-wrap xl:space-y-0 xl:gap-8 xl:flex xl:flex-row 2xl:justify-around">
-    {experiences.map(({ name, role, urls, image, description, language }, i) => 
-      <div key={i} className="text-white bg-gray-900 p-4 px-6 rounded-2xl shadow-lg">
+    {experiences.map(({ name, role, urls, image, description, language }, i) =>
+      <div key={i} className="dark:text-white text-gray-700 dark:bg-gray-900 p-4 px-6 rounded-2xl bg-gray-100 dark:shadow-lg">
         <div className="flex flex-row items-center">
           <h1 className="text-2xl font-bold">{name}</h1>
           <span className="text-lg opacity-75 flex flex-auto justify-end">{role}</span>
@@ -62,13 +62,13 @@ export const LinkSelect = ({ urls }) => {
   const select = useRef();
   useClickOutside(select, () => setOpen(false));
   return urls.length === 1
-    ? <a rel="noreferrer" target="_blank" href={urls[0].url}>
+    ? <a className="children:border-0" rel="noreferrer" target="_blank" href={urls[0].url}>
         <Button>
-          {urls[0].title}  
-        </Button>  
+          {urls[0].title}
+        </Button>
       </a>
     : <div className="relative" ref={select}>
-        <div className="relative z-10 children:flex children:items-center children:pr-5">
+        <div className="relative z-10 children:flex children:border-0 children:items-center children:pr-5">
           <Button onClick={() => setOpen(!opened)}>
             Liens disponibles <FontAwesomeIcon icon={faCaretDown} className="mt-0.5 ml-5" />
           </Button>
