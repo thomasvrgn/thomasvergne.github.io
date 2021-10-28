@@ -1,6 +1,6 @@
-import { Title } from './utils/Title';
-import { experiences } from './data/experiences.data';
-import { Button } from './utils/Button';
+import { Title } from '../components/utils/Title';
+import { experiences } from '../components/data/experiences.data';
+import { Button } from '../components/utils/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { getColorLanguage } from './Projects';

@@ -1,6 +1,6 @@
-import { Title } from './utils/Title';
-import { Input } from './utils/Input';
-import { Mailto } from './utils/Mail';
+import { Title } from '../components/utils/Title';
+import { Input } from '../components/utils/Input';
+import { Mailto } from '../components/utils/Mail';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';

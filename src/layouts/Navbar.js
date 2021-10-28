@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { Button, goTo } from './utils/Button';
+import { Button, goTo } from '../components/utils/Button';
 
 export const AnchorLink = ({ children, href, blank = false, ...params }) => {
   return <span onClick={() => goTo(href, blank)} {...params}>

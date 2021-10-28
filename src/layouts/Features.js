@@ -1,4 +1,4 @@
-import { Title } from './utils/Title';
+import { Title } from '../components/utils/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt, faHeart, faStar } from '@fortawesome/free-solid-svg-icons'
 

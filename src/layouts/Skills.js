@@ -1,5 +1,5 @@
-import { Title } from './utils/Title';
-import { skills } from './data/skills.data';
+import { Title } from '../components/utils/Title';
+import { skills } from '../components/data/skills.data';
 
 export const Skills = () => <section id="skills">
   <Title>Compétences</Title>

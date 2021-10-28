@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Title } from './utils/Title';
-import { Button } from './utils/Button';
+import { Title } from '../components/utils/Title';
+import { Button } from '../components/utils/Button';
 import { octo } from '../utils/api';
 import fetch from 'node-fetch';
 

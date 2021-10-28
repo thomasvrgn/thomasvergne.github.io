@@ -1,5 +1,5 @@
-import { Button } from './utils/Button';
-import { Title } from './utils/Title';
+import { Button } from '../components/utils/Button';
+import { Title } from '../components/utils/Title';
 
 export const Presentation = () => {
   return <section className="md:w-3/5 lg:w-1/2" id="presentation">
