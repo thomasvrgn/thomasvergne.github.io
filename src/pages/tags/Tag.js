@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { formatName } from '../../components/Projects';
+import { formatName } from '../../layouts/Projects';
 import { articles as fetched, filterArticlesByTag } from '../../utils/api';
 import { ArticleCard } from '../blog/Blog';
 

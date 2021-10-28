@@ -1,9 +1,9 @@
-import { Presentation } from '../components/Presentation';
-import { Skills } from '../components/Skills';
-import { Features } from '../components/Features';
-import { Projects } from '../components/Projects';
-import { Contact } from '../components/Contact';
-import { Experiences } from '../components/Experiences'; 
+import { Presentation } from '../layouts/Presentation';
+import { Skills } from '../layouts/Skills';
+import { Features } from '../layouts/Features';
+import { Projects } from '../layouts/Projects';
+import { Contact } from '../layouts/Contact';
+import { Experiences } from '../layouts/Experiences'; 
 
 export const Home = () => {
   document.title = 'Thomas Vergne';
