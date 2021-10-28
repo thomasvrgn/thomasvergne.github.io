@@ -1,13 +1,15 @@
 import { Button } from '../components/utils/Button';
 import { Title } from '../components/utils/Title';
 
+const diffDays = (date, otherDate) => Math.trunc(Math.abs(date - otherDate) / (1000 * 60 * 60 * 24 * 365.25));
+
 export const Presentation = () => {
   return <section className="md:w-3/5 lg:w-1/2" id="presentation">
     <Title>
       Présentation
     </Title>
     <p className="mt-4 text-gray-600 text-opacity-90 dark:text-white dark:text-opacity-60">
-      Je m'appelle Thomas et ai actuellement 15 ans. Je suis passionné désormais depuis 5 ans par l'informatique et un peu moins de deux ans par les mathématiques. J'ai commencé la conception de langages en cette année 2020.<br /><br />
+      Je m'appelle Thomas et ai actuellement {diffDays(new Date(2005, 9, 22), new Date(Date.now()))} ans. Je suis passionné désormais depuis 5 ans par l'informatique et un peu moins de deux ans par les mathématiques. J'ai commencé la conception de langages en cette année 2020.<br /><br />
 
       <span className="text-lg font-medium text-blue-800 dark:text-blue-300">
         N'hésitez pas à me poser des questions depuis mes moyens de contact...
