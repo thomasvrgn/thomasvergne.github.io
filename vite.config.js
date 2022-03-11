@@ -11,6 +11,8 @@ export default defineConfig({
     alias: {
       'components': path.resolve(__dirname, 'components'),
       'styles': path.resolve(__dirname, 'styles'),
+      'assets': path.resolve(__dirname, 'assets'),
+      'api': path.resolve(__dirname, 'api'),
     }
   }
 });
