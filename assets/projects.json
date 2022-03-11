@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Quark language",
+    "description": "Un langage de programmation basé sur le Lisp faiblement et statiquement typé. Il compile en bytecode pour être ensuite interprété sous une machine virtuelle.",
+    "image": "https://github.com/quark-lang/quark/raw/master/assets/logo.png",
+    "link": "https://quark-lang.dev/",
+    "code": "https://raw.githubusercontent.com/quark-lang/quark/master/tests/facto.qrk"
+  },
+  {
+    "name": "Lambda language",
+    "description": "Un langage de programmation ayant comme visée de davantage intégrer de concepts et outils mathématiques de manière explicite en informatique. Il est doté d'un puissant système de types disponible à plusieurs abstractions.",
+    "image": "https://raw.githubusercontent.com/lambda-language/.github/main/logo.png",
+    "link": "https://github.com/lambda-language",
+    "code": "https://raw.githubusercontent.com/lambda-language/specification/main/examples/factorial.lambda"
+  }
+]
