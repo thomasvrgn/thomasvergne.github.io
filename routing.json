@@ -4,7 +4,7 @@
      "author": "thomasvergne",
      "date":1624129211326,
      "description": "Comprenez via des exemples concrets la notion de foncteurs en Haskell !",
-     "title": "Comprendre les foncteurs",
+     "title": "Comprendre les foncteurs en Haskell",
      "slug": "understanding-functors",
      "image": "https://bartoszmilewski.files.wordpress.com/2015/01/functor.jpg",
      "url": "./articles/understanding-functors.md",
