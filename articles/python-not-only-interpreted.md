@@ -1,4 +1,3 @@
-# Python n'est pas seulement interprété
 Dans beaucoup des sites de nos jours documentant le Python, on y verra inscrit que Python n'est qu'un langage interprété. Néanmoins, il existe une subtilité à cela qui rend ces propos partiellement corrects. En effet, Python ne passe pas uniquement par une phase d'interprétation avant de pouvoir être exécuté.
 
 ### De la compilation dès le début
