@@ -1,4 +1,3 @@
-# Comprendre les foncteurs en Haskell
 De manière générale, un foncteur est un élément faisant parti du principe de la théorie des catégories qui n'est ni plus ni moins que la généralisation des morphismes aux catégories. Cependant, comme vous pouvez vous en rendre compte, cette définition n'est pas forcément adaptée à tout public tant elle se base sur des notions des mathématiques assez avancées. 
 
 C'est pour cela que je vais vous l'expliquer dès à présent dans cet article en me basant sur le Haskell principalement.
