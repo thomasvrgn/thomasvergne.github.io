@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import projects from 'assets/projects.json';
 
 export default function Projects() {
-  return <section className="p-16 pt-0 container 2xl:w-2/3 mx-auto">
+  return <section className="p-16 px-8 sm:px-16 pt-0 container 2xl:w-2/3 mx-auto">
     <HeadTitle>
       mes travaux
     </HeadTitle>
@@ -46,7 +46,7 @@ function Card({ project }) {
             {example}
           </pre>  
         </code>
-        <div className="flex gap-4 mt-4 justify-center lg:justify-start">
+        <div className="flex gap-4 mt-4 flex-col md:flex-row justify-center lg:justify-start">
           <Button black onClick={() => window.open(link, '_blank')}>
             Explorer le projet
           </Button>
