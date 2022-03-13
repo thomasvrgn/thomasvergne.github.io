@@ -2,7 +2,7 @@
   "name": "portfolio-experiments",
   "private": true,
   "author": "thomasvergne",
-  "homepage": "https://thomasvergne.github.io/portfolio-experiments",
+  "homepage": "https://thomas.is-a.dev",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
