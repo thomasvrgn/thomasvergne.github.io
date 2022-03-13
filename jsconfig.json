@@ -5,7 +5,8 @@
       "styles/*": ["./styles/*"],
       "components/*": ["./components/*"],
       "assets/*": ["./assets/*"],
-      "api/*": ["./api/*"]
+      "api/*": ["./api/*"],
+      "src/*": ["./src/*"],
     }
   },
   "exclude": ["node_modules"]
