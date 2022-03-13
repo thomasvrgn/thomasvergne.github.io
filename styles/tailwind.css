@@ -4,5 +4,77 @@
 
 .grid-effect {
   background-size: 40px 40px;
+  /* background-attachment: fixed; */
   background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+#article h1 {
+  @apply font-black text-3xl text-black;
+}
+
+#article h2 {
+  @apply font-black text-2xl text-black;
+}
+
+#article h3 {
+  @apply font-black text-xl text-black pt-6 pb-2;
+}
+
+#article *:not(h1, h1, h3) {
+  @apply text-lg text-black text-opacity-70;
+  line-height: 1.65rem;
+}
+
+#article ul {
+  @apply list-disc;
+}
+
+#article ol {
+  @apply list-decimal;
+}
+
+#article li {
+  @apply overflow-x-auto;
+}
+
+#article ul, ol {
+  @apply list-inside ml-4 !space-y-0 flex flex-col;
+}
+
+#article a {
+  @apply text-blue-500 hover:underline;
+}
+
+#article pre {
+  @apply bg-gray-100 overflow-x-auto rounded-xl p-6 my-2;
+}
+
+#article {
+  @apply dark:text-white space-y-4 text-black;
+}
+
+#article pre::-webkit-scrollbar {
+  width: 50px;
+}
+
+#article pre code {
+  padding: 0;
+}
+
+#article code {
+  @apply bg-gray-100 rounded-md;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 400;
+  padding: 0.2rem 0.5rem;
+}
+
+
+#article pre::-webkit-scrollbar-track {
+  @apply rounded-full;
+  border: solid 5px transparent;
+}
+#article pre::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px rgb(200, 200, 200) !important;
+  @apply rounded-full;
+  border: solid 5px transparent;
 }
