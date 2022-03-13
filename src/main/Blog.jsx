@@ -25,7 +25,7 @@ export default function Blog() {
   </section>;
 }
 
-function Card({ date, description, title, slug, image }) {
+export function Card({ date, description, title, slug, image }) {
   return <article id={slug} className="group">
     <img src={image} className="grayscale transition-all duration-500 group-hover:grayscale-0 w-full h-64 object-cover rounded-xl shadow" alt="" />
     <div className="py-6 min-h-[8rem]">
