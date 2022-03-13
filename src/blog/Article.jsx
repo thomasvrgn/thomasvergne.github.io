@@ -1,8 +1,6 @@
 import { ARTICLE_EXT, ARTICLE_URL, useBlog } from 'api/blog';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { HeadTitle } from 'components/Typography';
-import { Link } from 'react-router-dom';
 import Navigation from 'components/Navbar';
 
 function getDuration(article) {
@@ -24,12 +22,13 @@ export default function Article() {
   const { loading, articles } = useBlog(async function({ articles }) {
     const article = articles.find(article => article.slug === slug);
     const content = await (await fetch(ARTICLE_URL + article.slug + ARTICLE_EXT)).text();
+    document.title = `Thomas Vergne - ${article.title}`;
     return { ...article, content };
   });
 
-  return <section>
+  return <>
     <Navigation />
-    {!loading && articles && <div className="container 2xl:w-2/3 mx-auto pt-16 md:pt-32">
+    {!loading && articles && <section id="article-page" className="container 2xl:w-2/3 mx-auto pt-16 md:pt-32">
       <img src={articles.image} className="h-64 w-full object-cover md:rounded-xl" alt="" />
       <div className="flex flex-col md:flex-row items-center my-8 px-8 md:px-0">
         <div className="flex-auto text-center md:text-left flex flex-col mt-4 md:mt-0">
@@ -51,6 +50,6 @@ export default function Article() {
       <div id="article" className="px-8 md:px-0">
         <ReactMarkdown children={articles.content} />
       </div>
-    </div>}
-  </section>;
+    </section>}
+  </>;
 }
