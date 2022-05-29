@@ -8,11 +8,11 @@ export default function Blog() {
   const [articles, setArticles] = useState(null);
   useEffect(async () => setArticles(await loadArticles()), []);
   
-  return <section className="pt-16 px-8 sm:px-16 container 2xl:w-2/3 mx-auto">
+  return <section className="pt-16 px-8 sm:px-16 container xl:max-w-6xl mx-auto">
     <HeadTitle>
       mes articles
     </HeadTitle>
-    <div className="gap-8 gap-y-16 sm:gap-y-8 mt-16 flex flex-wrap children:w-full lg:children:w-[calc(50%-1rem)]">
+    <div className="gap-8 gap-y-16 sm:gap-y-8 mt-16 grid lg:grid-cols-2">
       {articles && articles.articles.slice(0, 2).map((x, i) => <Card {...x} key={i} />)}
     </div>
     {articles && articles.articles.length > 2 && <div className="pt-16 flex justify-center">

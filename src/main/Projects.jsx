@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import projects from 'assets/projects.json';
 
 export default function Projects() {
-  return <section className="p-16 px-8 sm:px-16 pt-0 container 2xl:w-2/3 mx-auto">
+  return <section className="p-16 px-8 sm:px-16 pt-0 container xl:max-w-6xl mx-auto" id="projects">
     <HeadTitle>
       mes travaux
     </HeadTitle>

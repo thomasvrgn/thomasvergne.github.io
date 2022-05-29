@@ -2,7 +2,7 @@ import { IconBrandTwitter, IconBrandGithub } from '@tabler/icons';
 import { Link } from 'react-router-dom';
 
 export default function Navigation() {
-  return <nav className="container mx-auto p-8 md:px-0 md:pt-16 flex flex-col md:flex-row items-center 2xl:w-2/3">
+  return <nav className="container mx-auto p-8 md:px-0 md:pt-16 flex flex-col md:flex-row items-center xl:max-w-5xl">
     <div className="flex flex-initial flex-col md:flex-row items-center text-center md:text-left">
       <img className="w-20 h-20 object-cover rounded-full shadow-md" src="https://cdn.discordapp.com/attachments/768087687655194675/949965497301106729/66BB0FC6-BA56-46CF-83BD-1305865FEBB8.jpg" alt="" />
       <div className="flex flex-col md:ml-4 justify-center">

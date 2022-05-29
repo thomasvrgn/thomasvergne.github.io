@@ -28,7 +28,7 @@ export default function Article() {
 
   return <>
     <Navigation />
-    {!loading && articles && <section id="article-page" className="container 2xl:w-2/3 mx-auto pt-16 md:pt-32">
+    {!loading && articles && <section id="article-page" className="container xl:max-w-5xl mx-auto pt-16 md:pt-32">
       <img src={articles.image} className="h-64 w-full object-cover md:rounded-xl" alt="" />
       <div className="flex flex-col md:flex-row items-center my-8 px-8 md:px-0">
         <div className="flex-auto text-center md:text-left flex flex-col mt-4 md:mt-0">
