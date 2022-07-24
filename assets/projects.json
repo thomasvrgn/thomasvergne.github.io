@@ -1,16 +1,30 @@
 [
   {
     "name": "Quark language",
-    "description": "Un langage de programmation basé sur le Lisp faiblement et statiquement typé. Il compile en bytecode pour être ensuite interprété sous une machine virtuelle.",
+    "description": "Un langage de programmation basé sur le Lisp fortement et dynamiquement typé. Il compile en javascript.",
     "image": "https://github.com/quark-lang/quark/raw/master/assets/logo.png",
-    "link": "https://quark-lang.dev/",
+    "link": "https://github.com/quark-lang/quark",
     "code": "https://raw.githubusercontent.com/quark-lang/quark/master/tests/facto.qrk"
   },
   {
     "name": "Lambda language",
-    "description": "Un langage de programmation ayant comme visée de davantage intégrer de concepts et outils mathématiques de manière explicite en informatique. Il est doté d'un puissant système de types disponible à plusieurs abstractions.",
+    "description": "Un langage de programmation ayant comme visée de davantage intégrer de concepts et outils mathématiques de manière explicite en informatique. Il est doté d'un puissant système de types.",
     "image": "https://raw.githubusercontent.com/lambda-language/.github/main/logo.png",
     "link": "https://github.com/lambda-language",
     "code": "https://raw.githubusercontent.com/lambda-language/specification/main/examples/factorial.lambda"
+  },
+  {
+    "name": "Pure",
+    "description": "Un langage de programmation impératif et fonctionnel fortement typé qui compile en C++.",
+    "image": "https://raw.githubusercontent.com/thomasvergne/pure/master/assets/logo.png",
+    "link": "https://github.com/thomasvergne/pure",
+    "code": "https://raw.githubusercontent.com/thomasvergne/pure/master/tests/factorial.pure"
+  },
+  {
+    "name": "Love",
+    "description": "Un langage de programmation impératif faiblement et dynamiquement typé écrit en Haskell qui compile en Javascript.",
+    "image": "https://github.com/thomasvergne/love/blob/master/assets/love.png?raw=true",
+    "link": "https://github.com/thomasvergne/love",
+    "code": "https://raw.githubusercontent.com/thomasvergne/love/master/tests/helloworld.love"
   }
 ]

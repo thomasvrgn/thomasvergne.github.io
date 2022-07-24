@@ -30,9 +30,9 @@ function Card({ project }) {
   return <article>
     <div className="grid lg:grid-cols-6 gap-8">
       <div className="col-span-6 lg:col-span-1 flex items-center justify-center">
-        <img src={image} className="w-24 h-24 rounded-lg shadow-md" alt="" />
+        <img src={image} className="w-24 object-cover h-24 rounded-lg shadow-md" alt="" />
       </div>
-      <div className="col-span-6 lg:col-span-5 flex items-center justify-center">
+      <div className="col-span-6 lg:col-span-5 flex items-center">
         <div className="text-center lg:text-left">
           <Title>{name}</Title>
           <Paragraph>
