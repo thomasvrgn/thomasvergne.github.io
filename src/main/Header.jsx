@@ -18,7 +18,7 @@ export default function App() {
       <p className="text-xl pt-2 pb-10 px-8 text-black text-opacity-60">
         Concepteur et développeur de langages de programmation
       </p>
-      <a href="#projects" class="mx-auto inline-block">
+      <a href="#projects" className="mx-auto inline-block">
         <Button black withIcon={IconArrowNarrowRight}>
           Découvrir mes travaux
         </Button>
