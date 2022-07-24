@@ -12,13 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route path="/">
-          <Route index element={<Main />} />
-          <Route path="blog">
-            <Route index element={<List />} />
-            <Route path=":slug" element={<Article />} />
-          </Route>
-        </Route>
+        <Route path="/" element={<Main />} />
+        <Route path="blog" element={<List />} />
+        <Route path="blog/:slug" element={<Article />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <footer className="h-[750px] relative overflow-hidden">
